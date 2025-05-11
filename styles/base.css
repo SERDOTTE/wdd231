@@ -15,35 +15,52 @@
 
 header {
     background-color: var(--primary-color);
-}   
+}
 
-    h1 {
-        padding-top: 1.5rem;
-        text-align: center;
-        color: var(--secondary-color);
-        font-family: var(--font-family);
-        font-size: 35px;
-    }
+.about__me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    
+}
+.about__me img {
+    width: 200px;
+    height: 200px;
+    border-radius: 4%;
+    object-fit: cover;
+    box-shadow: 8px 8px 8px rgba(184, 186, 191, 0.7);  
+    
+}
+
+h1 {
+    padding-top: 1.5rem;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: 50px;
+}
           
     nav {
         display: flex;
         justify-content: space-between;
-        background-color: rgb(66, 64, 64);
+        background-color: rgb(0, 0, 0);
         padding: 10px;
         font-family: var(--font-family);
         font-size: 30px;              
     }
         nav a {
             font-family: var(--font-family);
-            color: var(--secondary-color);
+            color: #aaacae;
             display: block;
             padding: 20px;
             text-decoration: none;
         }
         nav a:hover {
-            color: var(--accent2-color);
-            background-color: var(--accent1-color);
-            text-decoration: underline overline;
+            color: var(--secondary-color);      
+            text-decoration: underline;
         }
 
 main {
@@ -69,7 +86,7 @@ main {
     flex: 1; 
     border: 1px solid #064372; 
     border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(62, 93, 177, 0.7);
+    box-shadow: 0 4px 6px rgba(62, 93, 177, 0.7);  
   }
   
   .link-list {
@@ -78,18 +95,24 @@ main {
     margin: 0;
     
 }
-    
-    
-
-    .about__me__image {
-            max-width: 100%; 
-            height: auto; 
-            display: block; 
-            object-fit: cover; 
-            border: 1px solid #ccc; 
-            
-           
+ 
+    .paisage__image {
+        display: flex; /* Ativa o flexbox */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        flex-direction: column; /* Garante que o figcaption fique abaixo da imagem */
+        text-align: center;    
+        padding: 20px;
+        margin: 0;
+        
     }
+
+    .paisage__image img {
+    max-width: 70%; /* A imagem ocupará no máximo 80% da largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+}
 
     .apresentation {
         text-align: justify;
@@ -101,31 +124,14 @@ main {
         text-align: left;
         
     }
-    .flag__state {
-        display: flex;
-        padding: 10px;
+    .flag__flag {
+        height: 0.5em; /* Define a altura da imagem igual ao tamanho do texto */
+    vertical-align: middle; 
     }
        
-      .flag__state__text {
-        padding-left: 20px;
-        padding-right: 7px;
-        text-align: justify;
-    }
+      
 
-        figure {
-            display: flex;
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-            margin: 20px 0; 
-        }
-    
-            figcaption {
-                margin-top: 10px; 
-                font-size: 16px; 
-                color: #555;
-                font-style: italic;
-            }         
+        
 
     .nav__aside {
         display: flex;
@@ -142,8 +148,6 @@ main {
     .nav__aside a:hover {
         color: #0056b3; 
     }
-
-
 
 
 h2 {
