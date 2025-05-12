@@ -12,6 +12,11 @@
     
     <link rel="stylesheet" href="styles/base.css">   
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/course_list_array.js" defer></script>
+    <script src="scripts/filter_courses.js" defer></script>
+
+    
 </head>
 <body>
     <header>    
@@ -19,14 +24,16 @@
             <img class="about__me__image" src="images/profile.jpg" alt="Hello, my name is Rodrigo Serdotte Freitas" width="200">  
             <h1>Rodrigo S. Freitas</h1>
         </div>
-        <nav>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+        &#9776; 
+        </button>
+        <nav class="nav__menu">
             <a href="">Home</a>
             <a href="">Chamber</a>
             <a href="">Final</a>
             <a href="https://github.com/SERDOTTE">GitHub Profile</a>
             <a href="http://www.linkedin.com">Linkedin</a>
         </nav>
-        
     </header>
     <main>
         <h3>Home</h3>
@@ -52,10 +59,25 @@
                     <h2>Web and Computer Programming Certificate</h2>
                     <div class="course__programming__intern">
                         <div class="course__programming__intern__certificates">
-                                            
+                            <div class="button-container">
+                                <button>All Courses</button>
+                                <button>WDD Courses</button>
+                                <button>CSE Courses</button>
+                            </div>              
+                        </div>
+                        <div class="course__programming__intern__credits">
+                            <p id="credits_count">The total of course listes below is 12.</p> 
+                            <p id="credits_completed">You have X credits.</p>      
                         </div>
                         <div class="course__programming__intern__courses">
-
+                            <div class="button-container__courses">
+                                <button data-course-number="110">CSE 110</button>
+                                <button data-course-number="130">WDD 130</button>
+                                <button data-course-number="111">CSE 111</button>
+                                <button data-course-number="210">CSE 210</button>
+                                <button data-course-number="131">WDD 131</button>
+                                <button data-course-number="231">WDD 231</button>
+                            </div>              
                         </div>
                     </div>    
                 </section>
