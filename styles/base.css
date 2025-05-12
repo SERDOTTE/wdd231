@@ -149,7 +149,7 @@ nav a:hover {
         width: 90px; /* Reduce the width */
         height: auto; /* Maintain aspect ratio */
     }
-
+ 
 }
 
 main {
@@ -296,6 +296,11 @@ footer {
     font-family: var(--font-family);
     font-size: 20px;
     padding: 5px;
+}
+
+.brazil__flag {
+    width: 50px; /* Set the width to 15px */
+    height: auto; /* Maintain the aspect ratio */
 }
 
 #lastmod {
