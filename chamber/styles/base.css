@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: rgb(81, 201, 115);
+    --primary-color: rgb(16, 3, 23);
     --secondary-color: #eee;
     --font-family: 'Poppins', sans-serif;
     --primary-font-size: 20px;
@@ -142,7 +142,7 @@ nav.nav__menu {
 }
 
 .hero-text p {
-    background: rgba(3, 47, 83, 0.85);
+    background: rgba(50, 35, 68, 0.85);
     color: #fff;
     padding: 16px 24px;
     border-radius: 10px;
@@ -210,7 +210,7 @@ nav.nav__menu {
 }
 
 .card {
-    background: #8ac495;
+    background: #b8afcc;
     box-shadow: 0 2px 8px rgba(3,47,83,0.10);
     margin-bottom: 20px;
     height: 300px;
@@ -225,7 +225,7 @@ nav.nav__menu {
     width: 100%;
     margin: 0;
     padding: 5px 8px;
-    background: #032f53;
+    background: var(--primary-color, #032f53);
     color: #fff;
     font-family: var(--font-family);
     font-size: 1.5rem;
@@ -328,7 +328,7 @@ nav.nav__menu {
 footer {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    background: #032f53; /* Escolha uma cor diferente do header, se desejar */
+    background: var(--primary-color, #032f53); /* Escolha uma cor diferente do header, se desejar */
     color: #eee;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
