@@ -177,12 +177,12 @@ nav.nav__menu {
     display: none;
 }
 
-.nav__menu {
+/* .nav__menu {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     gap: 18px;
-}
+} */
 
 .nav__menu a {
     text-decoration: none;
@@ -233,77 +233,51 @@ nav.nav__menu {
     box-sizing: border-box;
 }
 
-/* Telas pequenas: mostra só o botão de tema e o hamburguer, esconde os links */
+/* Telas pequenas: menu escondido por padrão */
 @media (max-width: 700px) {
-    .hero img {
-        width: 100vw;
-        margin: 0;
-    }
-    .hero-text {
-        right: 10px;
-        bottom: 10px;
-    }
-    .hero-text p {
-        font-size: 1rem;
-        padding: 10px 14px;
-        max-width: 90vw;
-    }
-    .header__container__chamber {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .header__chamber {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-    /* Agrupa o hamburguer e o botão de tema à direita da header__chamber */
-    .header__chamber-actions {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        margin-left: auto;
-    }
-    .nav__menu {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: var(--primary-color, #032f53);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 180px;
-        border-radius: 8px;
-        box-shadow: 0 4px 16px rgba(3,47,83,0.18);
-        z-index: 100;
-    }
-    .nav__menu.active {
-        display: flex;
-    }
-    .nav__menu a {
-        display: block;
-        padding: 10px 16px;
-        color: var(--secondary-color, #eee);
-        text-align: left;
-        border-radius: 4px;
-    }
-    .hamburger-menu,
-    .theme-toggle-btn {
-        display: inline-block;
-    }
+  .nav__menu {
+    display: none !important;
+  }
+  .nav__menu.active {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: var(--primary-color, #032f53);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(3,47,83,0.18);
+    padding: 12px 24px;
+    z-index: 100;
+    gap: 10px;
+    width: 180px;
+  }
+  .nav__menu.active a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+  }
+  .hamburger-menu,
+  .theme-toggle-btn {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--secondary-color, #eee);
+    cursor: pointer;
+    vertical-align: middle;
+  }
 }
 
-/* Telas grandes: esconde o hamburguer e o botão de tema, mostra nav normalmente */
+/* Telas grandes: menu sempre visível em linha */
 @media (min-width: 701px) {
-    .header__chamber-actions {
-        display: none;
-    }
     .nav__menu {
         display: flex !important;
-        flex-direction: row;
+        flex-direction: row !important;
         align-items: flex-end;
         gap: 18px;
         position: static;
@@ -312,8 +286,29 @@ nav.nav__menu {
         width: auto;
     }
     .hamburger-menu,
+    .close-menu {
+        display: none !important;
+    }
+    /* Garante que o botão de tema fique ao lado direito do menu */
     .theme-toggle-btn {
-        display: none;
+        display: inline-block !important;
+        margin-left: 18px;
+        align-self: center;
+        font-size: 1.1rem;
+        background: #eee;
+        color: #032f53;
+        border-radius: 6px;
+        border: none;
+        padding: 6px 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+    .nav__menu {
+        /* Para garantir que o botão fique ao final do menu */
+    }
+    .nav__menu > .theme-toggle-btn {
+        margin-left: auto;
     }
 }
 
@@ -328,85 +323,36 @@ nav.nav__menu {
 footer {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    background: var(--primary-color, #032f53); /* Escolha uma cor diferente do header, se desejar */
+    background: var(--primary-color, #032f53);
     color: #eee;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas lado a lado */
     gap: 24px;
-    padding: 32px 0;
-    box-sizing: border-box;
-    font-family: var(--font-family, 'Poppins', sans-serif);
-}
-
-.chamber__contact {
-    display: flex;
-    flex-direction: column;
+    justify-content: left;
     align-items: flex-start;
-    justify-content: center;
+    padding: 32px 0;
     margin-bottom: 10px;
-    margin-left: 50px;
+    box-sizing: border-box;
 }
 
-.social__contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
+.chamber__contact,
+.social__contact,
 .author__info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-bottom: 10px;
+    align-items: left;
+    justify-content: left;
 }
 
-footer h3,
-footer p,
-footer ul,
-footer li {
-    margin: 6px 0;
-    padding: 0;
-    list-style: none;
-    color: #eee;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 18px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-icons li a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #fff; /* Ou a cor desejada */
-    font-size: 1.1rem;
-    text-decoration: none;
-}
-
-.social-icons li a:hover {
-    text-decoration: underline;
-}
-
-.social-icons i {
-    font-size: 1.4em;
-}
-
+/* Responsivo: empilha as colunas em telas pequenas */
 @media (max-width: 900px) {
     footer {
         grid-template-columns: 1fr;
         gap: 12px;
         text-align: center;
+    }
+    .chamber__contact,
+    .author__info {
+        align-items: center;
     }
 }

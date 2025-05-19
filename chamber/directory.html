@@ -25,9 +25,13 @@
     <link rel="stylesheet" href="styles/base.css" />
     <link
       rel="stylesheet"
+      href="styles/directory.css"
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
   </head>
   <body>
       <header>
@@ -43,21 +47,21 @@
               <h1>Canoas</h1>
               <p>Chamber of Commerce</p>
             </div>
-          </div>    
-          <div class="header__chamber-actions">
-            <button class="theme-toggle-btn" aria-label="Toggle theme">
-                🌙/☀️
-              </button>
-              <button class="hamburger-menu" aria-label="Toggle navigation">
-              &#9776;
-            </button>
-          </div>
+          </div>   
           <nav class="nav__menu">
             <a href="home.html">Home</a>
             <a href="directory.html">Directory</a>
             <a href="join.html">Join</a>
             <a href="discover.html">Discover</a>
-          </nav>
+          </nav> 
+          <div class="header__chamber-actions">
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+              &#9776;
+            </button>
+             <button class="theme-toggle-btn" aria-label="Toggle theme">
+                🌙/☀️
+              </button>
+          </div>
         </div>
       </header>
       <section class="hero">
@@ -68,7 +72,11 @@
           </div>
       </section
     <main>
-      DIRECTORY - in construction
+      <div class="menu__directory">
+        <button id="grid">⏹️ Grid</button>
+        <button id="list">📄 List</button>
+      </div>
+      <div id="cards" class="grid"></div>
     </main>
    <footer>
       <div class="chamber__contact">

@@ -1,0 +1,208 @@
+/* Prophet cards container: display cards in a row, wrap if needed, occupy full width */
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+/* Mostra os cards em grade (lado a lado) */
+#cards.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Mostra os cards em lista (um abaixo do outro) */
+#cards.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#cards.list section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr; /* ou ajuste conforme seus campos */
+  align-items: center;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 2rem;      /* <-- aumenta o padding lateral */
+  min-height: 80px;
+  width: 100vw;           /* Ocupa toda a largura da viewport */
+  margin-left: calc(-50vw + 50%); /* Centraliza e expande além do container */
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  #cards.list section {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0.5rem 1rem;   /* padding lateral menor em telas pequenas */
+  }
+}
+
+#cards.list section img {
+  display: none !important;
+}
+
+/* Optional: Make image a bit smaller on very small screens */
+@media (max-width: 600px) {
+    #cards img {
+        max-width: 140px;
+    }
+}
+
+/* Prophet card heading */
+#cards h2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 2rem;
+    color: #032f53;
+    margin: 0;
+    text-align: center;
+}
+
+#cards.list section h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: left;
+  color: #032f53;
+}
+
+/* H1 styling: blue color and Poppins font */
+h1 {
+    color: #032f53;
+    font-family: "Varela Round", sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 32px 0 16px 0;
+    letter-spacing: 1px;
+}
+
+/* Container for all content below the h1 */
+main {
+    background: #c6c7ce; /* Light gray background */
+    box-shadow: 0 8px 32px 0 rgba(10, 52, 87, 0.807), 0 4px 4px 4px rgba(4, 19, 31, 0.726); /* Darker, more prominent shadow on all sides */
+    border-radius: 16px;
+    padding: 32px 24px;
+    margin: 0 auto 32px auto;
+    max-width: 1400px;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.menu__directory {
+	margin: 1rem auto;
+	border: 1px solid rgba(155, 38, 38, 0.1);
+	padding: 0.5rem;
+	background-color: #303;
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+/* Reduce space between p elements and between p, h2, and img inside prophet cards */
+#cards section p {
+    margin: 1px 0; /* Less vertical space between paragraphs */
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    color: #030303;
+}
+
+/* Reduce space between h2, p, and img inside each card */
+#cards section h2 {
+    margin-bottom: 6px;
+}
+
+#cards section p:last-of-type {
+    margin-bottom: 8px; /* Less space before the image */
+}
+
+#cards section img {
+    margin-top: 8px; /* Less space above the image */
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 1rem #555;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-size: 1.2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+	background-color: #bbb;
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: Arial, sans-serif;
+	font-size: 0.85rem;
+	color: navy;
+}
+
+img {
+	width: auto;
+	height: 75px;
+}
+
