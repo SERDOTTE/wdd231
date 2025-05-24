@@ -8,18 +8,18 @@
 :root {
     --primary-color: #303;
     --secondary-color: #eee;
-    --font-family: 'Poppins', sans-serif, Arial, sans-serif; /* Fallback genérico */
+    --font-family: 'Poppins', sans-serif, Arial, sans-serif; /* Generic fallback */
     --primary-font-size: 20px;
     --principal-text-align: justify;
     background-color: #f0f0f0;
-    color: #333; /* Cor de texto padrão para contraste */
+    color: #333; /* Default text color for contrast */
 }
 
 header {
     position: relative;
     z-index: 10;
     background-color: var(--primary-color);
-    color: var(--secondary-color); /* Garantir contraste */
+    color: var(--secondary-color); /* Ensure contrast */
 }
 
 /* Container: flex row, space-between for logo/h1/p and nav/menu */
@@ -30,17 +30,17 @@ header {
     align-items: flex-end;
     padding: 16px 24px;
     background: var(--primary-color);
-    color: var(--secondary-color); /* Garantir contraste */
+    color: var(--secondary-color); /* Ensure contrast */
 }
 
-/* Agrupa nav__menu e botões lado a lado à direita */
+/* Groups nav__menu and buttons side by side on the right */
 .header__chamber-actions {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Deixa nav__menu próximo dos botões */
+/* Keeps nav__menu close to the buttons */
 .nav__menu {
     margin-right: 10px;
     display: flex;
@@ -184,7 +184,7 @@ nav.nav__menu {
     color: #fff;
 }
 
-/* Esconde o menu hamburguer em telas grandes, mostra nav normalmente */
+/* Hides the hamburger menu on large screens, shows nav normally */
 .hamburger-menu {
     display: none;
 }
@@ -216,7 +216,7 @@ nav.nav__menu {
 
 .card {
     background: #b8afcc;
-    color: #333; /* Cor de texto para contraste */
+    color: #333; /* Default text color for contrast */
     box-shadow: 0 2px 8px rgba(3,47,83,0.10);
     margin-bottom: 20px;
     height: 300px;
@@ -238,7 +238,7 @@ nav.nav__menu {
     box-sizing: border-box;
 }
 
-/* Telas pequenas: menu escondido por padrão */
+/* Small screens: menu hidden by default */
 @media (max-width: 700px) {
     .nav__menu {
         display: none !important;
@@ -250,7 +250,7 @@ nav.nav__menu {
         top: 60px;
         right: 10px;
         background: var(--primary-color);
-        color: var(--secondary-color); /* Garantir contraste */
+        color: var(--secondary-color); /* Ensure contrast */
         border-radius: 8px;
         box-shadow: 0 4px 16px rgba(3,47,83,0.18);
         padding: 12px 24px;
@@ -279,7 +279,7 @@ nav.nav__menu {
     }
 }
 
-/* Telas grandes: menu sempre visível em linha */
+/* Large screens: menu always visible in line */
 @media (min-width: 701px) {
     .nav__menu {
         display: flex !important;
@@ -311,7 +311,7 @@ nav.nav__menu {
     }
 }
 
-/* Telas médias: ajusta o grid para uma coluna */
+/* Medium screens: adjusts the grid to one column */
 @media (max-width: 900px) {
     .container {
         grid-template-columns: 1fr;
@@ -322,7 +322,7 @@ nav.nav__menu {
 footer {
     width: 100%;
     background: var(--primary-color);
-    color: var(--secondary-color); /* Garantir contraste */
+    color: var(--secondary-color); /* Ensure contrast */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
@@ -361,7 +361,7 @@ footer {
     color: yellow;
 }
 
-/* Responsivo: empilha as colunas em telas pequenas */
+/* Responsive: stacks columns on small screens */
 @media (max-width: 900px) {
     footer {
         grid-template-columns: 1fr;
@@ -374,7 +374,7 @@ footer {
     }
 }
 
-/* Footer responsivo para telas pequenas */
+/* Footer responsive for small screens */
 @media (max-width: 700px) {
     footer {
         display: flex;
