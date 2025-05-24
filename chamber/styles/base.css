@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: rgb(16, 3, 23);
+    --primary-color: #303;
     --secondary-color: #eee;
     --font-family: 'Poppins', sans-serif, Arial, sans-serif; /* Fallback genérico */
     --primary-font-size: 20px;
