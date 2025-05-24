@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 
-/* Ajustes para o container principal */
+/* Settings for the main container */
 .menu__directory {
   max-width: 100%;
   margin: 0 auto;
@@ -24,14 +24,14 @@
   box-sizing: border-box;
 }
 
-/* Ajustes para o container de cards */
+/* Adjustments for the card container */
 #cards {
   max-width: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-/* Ajustes específicos para a visualização em lista */
+/* Specific adjustments for list view */
 #cards.list {
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
   text-decoration: underline;
 }
 
-/* Ajustes para visualização em grid */
+/* Adjustments for grid view */
 #cards.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -111,7 +111,7 @@
   margin-bottom: 1rem;
 }
 
-/* Responsividade */
+/* Responsiveness */
 @media (max-width: 768px) {
   #cards.list section {
     flex-direction: column;
@@ -283,7 +283,7 @@ img {
 	height: 75px;
 }
 
-/* Ajuste para grid: margem em cada card e imagem maior */
+/* Adjustment to grid: margin on each card and larger image */
 #cards.grid section {
   margin: 16px;
   padding: 18px 10px;
