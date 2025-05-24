@@ -14,17 +14,34 @@
 }
 
 header {
+    position: relative;
+    z-index: 10;
     background-color: var(--primary-color);
 }
 
 /* Container: flex row, space-between for logo/h1/p and nav/menu */
 .header__container__chamber {
     display: flex;
-    flex-direction: row; /* Items side by side */
-    justify-content: space-between; /* Space between left and right */
-    align-items: flex-end; /* Align both blocks to the bottom */
+    flex-direction: row;
+    justify-content: space-between; /* header__chamber à esquerda, ações à direita */
+    align-items: flex-end;
     padding: 16px 24px;
     background: var(--primary-color, #032f53);
+}
+
+/* Agrupa nav__menu e botões lado a lado à direita */
+.header__chamber-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Deixa nav__menu próximo dos botões */
+.nav__menu {
+    margin-right: 10px; /* Ajuste fino de distância, se necessário */
+    display: flex;
+    gap: 18px;
+    align-items: center;
 }
 
 /* Left side: logo, h1, p */
@@ -67,6 +84,7 @@ nav.nav__menu {
     gap: 18px;
     margin-top: 0; /* Remove extra space above nav */
     justify-content: flex-end;
+    font-family: 'Poppins', sans-serif;
 }
     
 
@@ -108,16 +126,7 @@ nav.nav__menu {
 /* Hero section: full width, image centered, 50px margin on sides */
 .hero {
     position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 1;
 }
 
 /* Hero image: centered, full width minus 100px (50px margin each side) */
@@ -139,6 +148,7 @@ nav.nav__menu {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-text p {
@@ -241,7 +251,7 @@ nav.nav__menu {
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(3,47,83,0.18);
     padding: 12px 24px;
-    z-index: 100;
+    z-index: 9999; /* Aumenta o z-index para garantir que fique acima */
     gap: 10px;
     width: 180px;
   }
@@ -314,18 +324,17 @@ nav.nav__menu {
 
 /* Footer styles */
 footer {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
     background: var(--primary-color, #032f53);
     color: #eee;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Três colunas lado a lado */
-    gap: 24px;
-    justify-content: left;
-    align-items: center;
-    padding: 32px 0;
-    margin-bottom: 10px;
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas */
+    gap: 32px; /* Espaço entre colunas */
+    align-items: flex-start;
+    padding: 32px 40px; /* Espaço interno nas laterais */
+    margin: 0 auto;
     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
 }
 
 .chamber__contact,
@@ -333,8 +342,8 @@ footer {
 .author__info {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start; /* Alinha à esquerda dentro da coluna */
+    justify-content: flex-start;
 }
 
 .social-icons {
@@ -352,6 +361,13 @@ footer {
     object-fit: cover;
 }
 
+#lastmod {
+    color: yellow;
+  }
+
+  * {
+    will-change: transform, opacity;
+}
 
 /* Responsivo: empilha as colunas em telas pequenas */
 @media (max-width: 900px) {
@@ -364,4 +380,34 @@ footer {
     .author__info {
         align-items: center;
     }
+}
+
+/* Footer responsivo para telas pequenas */
+@media (max-width: 700px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 10px;
+  }
+
+  .chamber__contact,
+  .author__info {
+    align-items: flex-start !important;
+    text-align: left;
+    width: 100%;
+  }
+
+  .social__contact {
+    align-items: center !important;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons {
+    justify-content: center;
+    width: 100%;
+  }
 }

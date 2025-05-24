@@ -1,3 +1,10 @@
+const currentYear = new Date().getFullYear();
+document.getElementById("copyrightYear").textContent = currentYear;
+
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = lastModified;
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav__menu');
