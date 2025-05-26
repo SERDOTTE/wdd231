@@ -12,8 +12,7 @@ listbutton.addEventListener("click", () => {
   cards.classList.remove("grid");
 });
 
-const url = 'data/members.json'; // Caminho local para o arquivo JSON
-
+const url = 'data/members.json'; // Local path to JSON file
 async function getMembersData() {
     const response = await fetch(url);
     const data = await response.json();
@@ -24,10 +23,10 @@ getMembersData();
 
 const displayMembers = (members) => {
     members.forEach((member) => {
-        // Cria o card
+        // Create the card
         const section = document.createElement('section');
 
-        // Imagem/logo
+        // Image/logo
         const img = document.createElement('img');
         img.setAttribute('src', `images/${member.image}`);
         img.setAttribute('alt', `Logo of ${member.name}`);
@@ -35,17 +34,17 @@ const displayMembers = (members) => {
         img.setAttribute('width', '120');
         section.appendChild(img);
 
-        // Nome da empresa
+        // Company name
         const name = document.createElement('h2');
         name.textContent = member.name;
         section.appendChild(name);
 
-        // Endereço
+        // Address
         const address = document.createElement('p');
         address.textContent = member.address;
         section.appendChild(address);
 
-        // Telefone
+        // Phone
         const phone = document.createElement('p');
         phone.textContent = `Phone: ${member.phone}`;
         section.appendChild(phone);
@@ -57,7 +56,7 @@ const displayMembers = (members) => {
         website.target = "_blank";
         section.appendChild(website);
 
-        // Adiciona o card ao container
+        // Add the card to the container
         cards.appendChild(section);
     });
 };

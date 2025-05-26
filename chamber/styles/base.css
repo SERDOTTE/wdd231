@@ -203,41 +203,7 @@ nav.nav__menu {
     color: #032f53;
     font-family: var(--font-family);
 }
-
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    align-items: start;
-}
-
-.card {
-    background: #b8afcc;
-    color: #333; /* Default text color for contrast */
-    box-shadow: 0 2px 8px rgba(3,47,83,0.10);
-    margin-bottom: 20px;
-    height: 300px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-top: 0;
-}
-
-.card h2 {
-    width: 100%;
-    margin: 0;
-    padding: 5px 8px;
-    background: var(--primary-color);
-    color: #fff;
-    font-family: var(--font-family);
-    font-size: 1.5rem;
-    text-align: left;
-    box-sizing: border-box;
-}
-
+               
 /* Small screens: menu hidden by default */
 @media (max-width: 700px) {
     .nav__menu {
@@ -310,14 +276,6 @@ nav.nav__menu {
         transition: background 0.2s, color 0.2s;
     }
 }
-
-/* Medium screens: adjusts the grid to one column */
-@media (max-width: 900px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Footer styles */
 footer {
     width: 100%;

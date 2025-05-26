@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bella Moda",
+    "tag_line": "Trendy clothing and accessories for all ages.",
+    "email": "contact@bellam.com.br",
+    "phone": "+55 51 97777-3333",
+    "website": "https://www.bellamoda.com.br",
+    "image": "bellamoda.png"
+  },
+  {
+    "name": "EducaMais School",
+    "tag_line": "Private school focused on innovative learning.",
+    "email": "contact@educam.com.br",
+    "phone": "+55 51 95555-5555",
+    "website": "https://www.educamais.com.br",
+    "image": "educamais.jpeg"
+  },
+  {
+    "name": "Green Energy RS",
+    "tag_line": "Renewable energy solutions for homes and businesses.",
+    "email": "contact@genergy.com.br",
+    "phone": "+55 51 94444-6666",
+    "website": "https://www.greenenergyrs.com.br",
+    "image": "greenenergy.jpeg"
+  }
+]

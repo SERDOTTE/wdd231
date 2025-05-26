@@ -3,25 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Canoas Chamber of Commerce business directory to connect with local businesses and grow your network in Canoas, RS.">
+    <meta name="description" content="Explore the Canoas Chamber of Commerce business index to connect with local businesses and grow your network in Canoas, RS.">
     <title>The Chamber of Commerce</title>
     <link rel="icon" href="/images/favicon.ico">
-    <meta name="keywords" content="Canoas, Chamber of Commerce, business directory, local businesses, networking">
+    <meta name="keywords" content="Canoas, Chamber of Commerce, index page, local businesses, networking">
     <meta name="author" content="Rodrigo Serdotte Freitas">
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="The Chamber of Commerce">
     <meta property="og:description" content="Rodrigo Serdotte Freitas - WDD 231 - Web Frontend Development I - Chamber Directory Page">
     <meta property="og:image" content="https://serdotte.github.io/wdd231/images/profile.jpg">
-    <meta property="og:url" content="https://serdotte.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://serdotte.github.io/wdd231/chamber/index.html">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/base.css">    
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contacts__card.css">
     <script src="scripts/menu.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/contacts_cards.js" defer></script>
+
   </head>
   <body>
-      <header>
+    <header>
         <div class="header__container__chamber">
           <div class="header__chamber">
             <img
@@ -51,19 +54,46 @@
         </div>
       </header>
       <section class="hero">
-          <h2 class="visually-hidden">Main Highlight</h2>
-          <img src="images/hero_image.jpg" alt="Main highlight image">
-          <div class="hero-text">
-              <p>Grow your business with us!</p>
-              <a href="#join" class="cta-button">Join Now</a>
-          </div>
+        <h2 class="visually-hidden">Main Highlight</h2>
+        <img src="images/hero_image.jpg" alt="Main highlight image">
+        <div class="hero-text">
+          <p>Grow your business with us!</p>
+          <a href="#join" class="cta-button">Join Now</a>
+        </div>
       </section>
     <main>
-      <div class="menu__directory">
-        <button id="grid">⏹️ Grid</button>
-        <button id="list">📄 List</button>
+      <h1 class="home__title">Home</h1>
+      <div class="container">
+        <section class="card">
+          <h2>Events</h2>
+        </section>
+        <section class="card">
+          <h2>Current Weather</h2>
+          <div class="weather-container">
+            <div class="weather-info">             
+              <img id="graphic" src="" alt="">
+              <div class="weather-data">
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <p id="high"></p>
+                <p id="low"></p>
+                <p id="humidity"></p>
+                <p id="sunrise"></p>
+                <p id="sunset"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <h2>Weather Forecast</h2>
+          <p id="today"></p>
+          <p id="tomorrow"></p>
+          <p id="day-after-tomorrow"></p>
+        </section>
       </div>
-      <div id="cards" class="grid"></div>
+      <div id="contacts__card">
+        
+      </div>
     </main>
    <footer>
       <div class="chamber__contact">
@@ -89,4 +119,3 @@
     </footer>
   </body>
 </html>
-
