@@ -53,7 +53,7 @@
     font-weight: bold;
 }
 
-/* Centraliza o nome e o tag line */
+/* Center the name and tag line */
 .contact-card h2,
 .contact-card .tagline {
     text-align: center;
@@ -71,7 +71,7 @@
     font-size: 1rem;
 }
 
-/* Linha horizontal abaixo do tag line */
+/* Horizontal line below the tag line */
 .contact-card .tagline::after {
     content: "";
     display: block;
@@ -108,8 +108,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 3px;
-    font-family: var(--font-family); /* mesma fonte do h2 */
-    font-size: 0.7rem; /* menor que o h2 */
+    font-family: var(--font-family); /* same font as h2 */
+    font-size: 0.7rem; /* smaller than h2 */
 }
 
 .contact-right p,
@@ -119,7 +119,7 @@
     color: #222;
     font-size: 0.7rem;
     word-break: break-all;
-    font-family: var(--font-family); /* garante a mesma fonte */
+    font-family: var(--font-family); /* guarantee the same font */
 }
 
 .contact-right .label {

@@ -67,7 +67,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    font-family: var(--font-family); /* garante a mesma fonte */
+    font-family: var(--font-family); /* guarantees the same source */
     font-size: 1rem;
 
 }
@@ -78,4 +78,23 @@
 
 #temperature {
     font-weight: bold;
+}
+
+/* Adjust the forecast section to match the font and size of weather-data*/
+.card .forecast-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Space between days */
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin-top: 18px; /* Space from h2 */
+    width: 100%;
+}
+
+.card .forecast-data p {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 0 18px; /* top, right, bottom, left */
 }

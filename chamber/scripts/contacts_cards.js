@@ -1,4 +1,4 @@
-const url = 'data/contacts.json'; // Caminho local para o arquivo JSON
+const url = 'data/contacts.json'; // Local path to the JSON file
 
 async function getContactsData() {
     const response = await fetch(url);
@@ -12,26 +12,26 @@ const cards = document.getElementById('contacts__card');
 
 const displayContacts = (contacts) => {
     contacts.forEach((contact) => {
-        // Cria o card principal
+        // Create the main card
         const card = document.createElement('section');
         card.classList.add('contact-card');
 
-        // Nome acima
+        // Name above
         const name = document.createElement('h2');
         name.textContent = contact.name;
         card.appendChild(name);
 
-        // Tag line abaixo do nome
+        // Tag line below the name
         const tagline = document.createElement('p');
         tagline.classList.add('tagline');
         tagline.textContent = contact.tag_line;
         card.appendChild(tagline);
 
-        // Container para as duas colunas
+        // Container for the two columns
         const columns = document.createElement('div');
         columns.classList.add('contact-columns');
 
-        // Coluna da esquerda: imagem
+        // Left column: image
         const leftCol = document.createElement('div');
         leftCol.classList.add('contact-left');
         const img = document.createElement('img');
@@ -41,7 +41,7 @@ const displayContacts = (contacts) => {
         img.width = 100;
         leftCol.appendChild(img);
 
-        // Coluna da direita: email, phone, website
+        // Right column: email, phone, website
         const rightCol = document.createElement('div');
         rightCol.classList.add('contact-right');
 
@@ -57,14 +57,14 @@ const displayContacts = (contacts) => {
         website.innerHTML = `<span class="label">URL:</span> <a href="${contact.website}" target="_blank">${contact.website}</a>`;
         rightCol.appendChild(website);
 
-        // Junta as colunas
+        // Join the columns
         columns.appendChild(leftCol);
         columns.appendChild(rightCol);
 
-        // Adiciona as colunas ao card
+        // Add the columns to the card
         card.appendChild(columns);
 
-        // Adiciona o card ao container principal
+        // Add the card to the main container
         cards.appendChild(card);
     });
 };

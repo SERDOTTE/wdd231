@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.nav__menu');
 
-    // Cria o botão X dinamicamente
+    // Creates the X button dynamically
     const closeBtn = document.createElement('button');
     closeBtn.innerHTML = '&times;';
     closeBtn.setAttribute('aria-label', 'Close menu');
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.style.alignSelf = 'flex-end';
     closeBtn.style.marginBottom = '10px';
 
-    // Mostra o menu ao clicar no hamburguer
+    // Show the menu when clicking the hamburger
     hamburger.addEventListener('click', () => {
         navMenu.classList.add('active');
         if (!navMenu.contains(closeBtn)) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Esconde o menu ao clicar no X
+    // Hide the menu when clicking the X
     closeBtn.addEventListener('click', () => {
         navMenu.classList.remove('active');
         if (navMenu.contains(closeBtn)) {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Garante que o menu e o X sumam ao redimensionar para telas grandes
+    // Ensure the menu and X disappear when resizing to larger screens
     window.addEventListener('resize', () => {
         if (window.innerWidth > 700) {
             navMenu.classList.remove('active');
