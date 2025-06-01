@@ -1,76 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Chamber of Commerce</title>
-    <link rel="icon" href="/images/favicon.ico" />
-    <meta name="author" content="Rodrigo Serdotte Freitas" />
-    <meta
-      property="og:title"
-      content="Rodrigo Serdotte Freitas's BYU-Idaho WDD 231 - Web Frontend Development I - Chamber Directory Page"
-    />
-    <meta
-      property="og:description"
-      content="Rodrigo Serdotte Freitas - WDD 231 - DWeb Frontend Development I - Chamber Directory Page"
-    />
-    <meta
-      property="og:image"
-      content="https://https://serdotte.github.io/wdd231/images/profile.jpg"
-    />
-    <meta
-      property="og:url"
-      content="https://serdotte.github.io/wdd131/chamber/directory.html"
-    />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Canoas Chamber of Commerce business index to connect with local businesses and grow your network in Canoas, RS.">
+    <title>Home</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="keywords" content="Canoas, Chamber of Commerce, index page, local businesses, networking">
+    <meta name="author" content="Rodrigo Serdotte Freitas">
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Chamber of Commerce">
+    <meta property="og:description" content="Rodrigo Serdotte Freitas - WDD 231 - Web Frontend Development I - Chamber Directory Page">
+    <meta property="og:image" content="https://serdotte.github.io/wdd231/images/profile.jpg">
+    <meta property="og:url" content="https://serdotte.github.io/wdd231/chamber/index.html">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">    
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contacts__card.css">
+    <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/contacts_cards.js" defer></script>
+
   </head>
   <body>
-        <header>
-            <div class="header__container__chamber">
-                <div class="header__chamber">
-                    <img
-                        class="logo"
-                        src="images/logo_chamber_canoas.png"
-                        alt="Canoas Chamber logo"
-                        width="80"
-                    />
-                    <div class="header__chamber-text">
-                        <h1>Canoas</h1>
-                        <p>Chamber of Commerce</p>
-                    </div>
-                </div>    
-                <div class="header__chamber-actions">
-                    <button class="theme-toggle-btn" aria-label="Toggle theme">
-                        🌙/☀️
-                        </button>
-                        <button class="hamburger-menu" aria-label="Toggle navigation">
-                        &#9776;
-                    </button>
-                </div>
-                <nav class="nav__menu">
-                    <a href="home.html">Home</a>
-                    <a href="directory.html">Directory</a>
-                    <a href="join.html">Join</a>
-                    <a href="discover.html">Discover</a>
-                </nav>
+    <header>
+        <div class="header__container__chamber">
+          <div class="header__chamber">
+            <img
+                class="logo"
+                src="images/logo_chamber_canoas.png"
+                alt="Canoas Chamber logo"
+                width="80">
+            <div class="header__chamber-text">
+              <h1>Canoas</h1>
+              <p>Chamber of Commerce</p>
             </div>
-        </header>
-        <section class="hero">
-            <img src="images/hero_image.jpg" alt="Main highlight image" />
-            <div class="hero-text">
-                <p>Grow your business with us!</p>
-                <a href="#join" class="cta-button">Join Now</a>
-            </div>
-        </section
-        <main>
-            JOIN - in construction
-        </main>
-        <footer>
+          </div>   
+          <div class="header__chamber-actions">
+            <nav class="nav__menu">
+              <a href="index.html">Home</a>
+              <a href="directory.html">Directory</a>
+              <a href="join.html">Join</a>
+              <a href="discover.html">Discover</a>
+            </nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+              &#9776;
+            </button>
+              <button class="theme-toggle-btn" aria-label="Toggle theme">
+                🌙/☀️
+              </button>
+          </div>
+        </div>
+      </header>
+      <section class="hero">
+        <h2 class="visually-hidden">Main Highlight</h2>
+        <img src="images/hero_image.jpg" alt="Main highlight image">
+        <div class="hero-text">
+          <p>Grow your business with us!</p>
+          <a href="#join" class="cta-button">Join Now</a>
+        </div>
+      </section>
+    <main>
+      <h1 class="home__title">Join the Chamber</h1>
+       <div class="container">
+        <div class="membership__form">
+            <form action="#" method="post">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="organization">Organization:</label>
+                <input type="text" id="organization" name="organization" required>
+                <label for="business">Business description:</label>
+                <textarea id="business" name="business" rows="4" required></textarea>
+                <fieldset>
+                    <legend>Membership Level:</legend>
+                    <input type="radio" id="non_profit" name="membership" value="non_profit" required>
+                    <label for="non_profit">Non Profit Membership</label><br>
+                    <input type="radio" id="bronze" name="membership" value="bronze">
+                    <label for="bronze">Bronze Membership</label><br>
+                    <input type="radio" id="silver" name="membership" value="silver">
+                    <label for="silver">Silver Membership</label><br>
+                    <input type="radio" id="gold" name="membership" value="gold">
+                    <label for="gold">Gold Membership</label><br>
+                </fieldset>
+                <button type="submit">Join Now</button>
+            </form>
+        </div>
+        <div class="membership__levels">
+            <h2>Membership Levels</h2>
+            <ul>
+                <li>
+                    <strong>Non Profit Membership</strong>
+                    <p>Ideal for new businesses looking to establish themselves in the community.</p>
+                    <button>Learn More</button>
+                </li>
+                <li>
+                    <strong>Bronze Membership</strong>
+                    <p>A great entry-level option for small businesses.</p>
+                    <button>Learn More</button>
+                </li>
+                <li>
+                    <strong>Silver Membership</strong>
+                    <p>Offers additional benefits and networking opportunities.</p>
+                    <button>Learn More</button>
+                </li>
+                <li>
+                    <strong>Gold Membership</strong>
+                    <p>Premium membership with exclusive perks and visibility.</p>
+                    <button>Learn More</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+      
+    </main>
+   <footer>
       <div class="chamber__contact">
         <h3>Canoas Chamber of Commerce</h3>
         <p>1234 Main St, Canoas, RS</p>
@@ -78,31 +131,18 @@
         <p>info@canoaschamber.com</p>
         <p>(51) 1234-5678</p>
       </div>
-      <div class="social__contact">
-        <p>Follow us on social media:</p>
-        <ul class="social-icons">
-          <li>
-            <a href="#" aria-label="YouTube"
-              ><i class="fab fa-youtube"></i></a
-            >
-          </li>
-          <li>
-            <a href="#" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i></a
-            >
-          </li>
-          <li>
-            <a href="#" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i></a
-            >
-          </li>
-        </ul>
+      <div class="social__contact">        
+        <div class="social-icons">
+          <a href="#"><img class="icon" src="images/facebook_icon.png" alt="Facebook"></a>
+          <a href="#"><img class="icon" src="images/twitter_icon.png" alt="Twitter"></a>
+          <a href="#"><img class="icon" src="images/insta_icon.png" alt="Instagram"></a>
+        </div>
       </div>
       <div class="author__info">
         <p>WDD231 Class Project</p>
         <p>Rodrigo Serdotte Freitas</p>
         <p>&copy;<span id="copyrightYear"></span>Canoas Chamber of Commerce</p>
-        <p>Last Modification: <span id="last_update"></span></p>
+        <p id="lastmod">Last Modification: <span id="lastModified"></span></p>
       </div>
     </footer>
     </body>
