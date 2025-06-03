@@ -1,4 +1,4 @@
-  .container {
+.container {
             display: flex;
             max-width: 1200px;
             margin: 0 auto;
@@ -19,9 +19,13 @@
         }
 
         .membership__form label {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #333;
             margin-bottom: 5px;
+            font-family: var(--font-family);
+            margin-right: 0;
+            display: block;
+            text-align: left;
         }
 
         .membership__form input,
@@ -34,20 +38,95 @@
             box-sizing: border-box;
         }
 
-        .membership__form fieldset {
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 5px;
-        }
+       /* Alinha todo o conteúdo do fieldset à esquerda */
+.membership__form fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
 
-        .membership__form legend {
-            font-size: 1.1em;
-            color: #333;
-        }
+.memb__fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
 
-        .membership__form input[type="radio"] {
-            margin-right: 10px;
-        }
+.memb__fieldset legend {
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+}
+
+/* Alinha o legend à esquerda */
+.membership__form legend {
+    font-size: 1.8rem;
+    color: #333;
+    font-family: var(--font-family);
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+}
+
+/* Alinha cada radio-group à esquerda */
+.membership__form .radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 0;
+    width: auto; /* garante que não ocupe largura total */
+}
+
+.memb__fieldset .radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+}
+
+/* Radio à esquerda do label, sem margens exageradas */
+.membership__form .radio-group input[type="radio"] {
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.memb__fieldset .radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Remova margens globais para label/input[type="radio"] que não estejam em .radio-group */
+.membership__form label:not(.radio-group label) {
+    margin-right: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.membership__form .radio-group label {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    font-family: var(--font-family);
+    display: inline-block; /* <-- importante para alinhar ao lado do radio */
+    vertical-align: middle;
+    text-align: left;
+    width: auto; /* <-- importante para não ocupar toda a linha */
+}
+
+.memb__fieldset .radio-group label {
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
 
         .membership__form button {
             background-color: #28a745;
@@ -60,6 +139,7 @@
             transition: background-color 0.3s;
             align-self: center;
             margin-top: 10px;
+            font-family: var(--font-family);
         }
 
         .membership__form button:hover {
@@ -71,25 +151,31 @@
             margin-bottom: 30px;
             font-size: 2em;
             color: #333;
+            font-family: var(--font-family);
         }
 
         .membership__levels ul {
             list-style: none;
             padding: 0;
+            margin: 0;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
         .membership__levels li {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: #f5f3fa;
+            border-radius: 18px 0 0 18px; /* superior direito e inferior esquerdo arredondados */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 20px 24px;
+            position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+        }
+
+        .membership__levels p {
+            display: none;
         }
 
         .membership__levels li:nth-child(1) {
@@ -108,33 +194,72 @@
             background-color: #f7e7ce; /* Cor para Gold */
         }
 
-        .membership__levels strong {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            color: #222;
+        .membership__levels li strong {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-family: var(--font-family);
         }
 
-        .membership__levels p {
-            margin: 0 0 20px 0;
-            color: #555;
-            font-size: 1em;
-            max-width: 80%;
-        }
-
-        .membership__levels button {
-            background-color: #007BFF;
-            color: white;
+        .membership__levels li button {
+            margin-top: 10px;
+            padding: 8px 18px;
             border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
+            border-radius: 6px;
+            background: #6c5b7b;
+            color: #fff;
+            font-family: var(--font-family);
+            font-size: 1rem;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
+            transition: background 0.2s;
         }
+.membership__levels li button:hover {
+    background: #48325b;
+}
 
-        .membership__levels button:hover {
-            background-color: #0056b3;
-        }
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0; /* substitui left, top, right, bottom */
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* permite rolar se o popup for maior que a tela */
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px 18px 28px;
+    max-width: 350px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    position: relative;
+    text-align: left;
+    font-family: var(--font-family);
+    margin: 40px 0; /* espaço extra para telas pequenas */
+}
+
+.popup-content p {
+    margin: 0 0 12px 0;
+    color: #333;
+    font-size: 1.08rem;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #6c5b7b;
+}
 
         @media (max-width: 768px) {
             .container {
