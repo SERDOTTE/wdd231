@@ -161,7 +161,18 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            /* Animação de entrada */
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
         }
+
+        @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
         .membership__levels li {
             background: #f5f3fa;
@@ -259,6 +270,18 @@
     font-size: 1.3rem;
     cursor: pointer;
     color: #6c5b7b;
+}
+
+/* Inputs obrigatórios: barra vermelha à esquerda */
+.membership__form input[required],
+.membership__form textarea[required] {
+    border-left: 6px solid #e53935;
+}
+
+/* Inputs não obrigatórios: barra azul à esquerda */
+.membership__form input:not([required]),
+.membership__form textarea:not([required]) {
+    border-left: 6px solid #1976d2;
 }
 
         @media (max-width: 768px) {
