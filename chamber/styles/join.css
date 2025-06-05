@@ -38,7 +38,7 @@
             box-sizing: border-box;
         }
 
-       /* Alinha todo o conteúdo do fieldset à esquerda */
+       /* Aligns all fieldset content to the left */
 .membership__form fieldset {
     border: 1px solid #ddd;
     padding: 15px;
@@ -46,27 +46,7 @@
     text-align: left;
 }
 
-.memb__fieldset {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: left;
-}
-
-#membership__level__title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    
-}
-
-.memb__fieldset legend {
-    text-align: left;
-    margin-bottom: 10px;
-    width: 100%;
-    display: block;
-}
-
-/* Alinha o legend à esquerda */
+/* Aligns the legend to the left */
 .membership__form legend {
     font-size: 1.8rem;
     color: #333;
@@ -77,7 +57,7 @@
     display: block;
 }
 
-/* Alinha cada radio-group à esquerda */
+/* Aligns each radio-group to the left */
 .membership__form .radio-group {
     display: flex;
     align-items: center;
@@ -85,53 +65,35 @@
     margin-bottom: 10px;
     text-align: left;
     padding-left: 0;
-    width: auto; /* garante que não ocupe largura total */
+    width: auto; /* ensures it does not take full width */
 }
 
-.memb__fieldset .radio-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-    text-align: left;
-    width: 100%;
-    padding-left: 0;
-}
-
-/* Radio à esquerda do label, sem margens exageradas */
+/* Radio to the left of the label, without excessive margins */
 .membership__form .radio-group input[type="radio"] {
     margin-right: 8px;
     margin-bottom: 0;
 }
 
 .memb__fieldset .radio-group input[type="radio"] {
-    margin-right: 8px;
+    /* margin-right: 8px; */
 }
 
-/* Remova margens globais para label/input[type="radio"] que não estejam em .radio-group */
+/* Remove global margins for label/input[type="radio"] not in .radio-group */
 .membership__form label:not(.radio-group label) {
-    margin-right: 0;
+    /* margin-right: 0; */
     margin-bottom: 5px;
     font-size: 1.1em;
 }
 
 .membership__form .radio-group label {
-    margin: 0;
+    /* margin: 0; */
     font-size: 1rem;
     color: #333;
     font-family: var(--font-family);
     display: inline-block; /* <-- importante para alinhar ao lado do radio */
     vertical-align: middle;
     text-align: left;
-    width: auto; /* <-- importante para não ocupar toda a linha */
-}
-
-.memb__fieldset .radio-group label {
-    margin: 0;
-    display: inline-block;
-    text-align: left;
-    font-size: 1rem;
-    font-family: var(--font-family);
+    /* width: auto; <-- importante para não ocupar toda a linha */
 }
 
         .membership__form button {
@@ -167,7 +129,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            /* Animação de entrada */
+            /* Entry animation */
             opacity: 0;
             transform: translateY(40px);
             animation: fadeInUp 1.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
@@ -182,7 +144,7 @@
 
         .membership__levels li {
             background: #f5f3fa;
-            border-radius: 18px 0 0 18px; /* superior direito e inferior esquerdo arredondados */
+            border-radius: 18px 0 0 18px; /* top right and bottom left rounded */
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
             padding: 20px 24px;
             position: relative;
@@ -196,19 +158,19 @@
         }
 
         .membership__levels li:nth-child(1) {
-            background-color: #e6f3fa; /* Cor para Non Profit */
+            background-color: #e6f3fa; /* Color for Non Profit */
         }
 
         .membership__levels li:nth-child(2) {
-            background-color: #f4e4bc; /* Cor para Bronze */
+            background-color: #f4e4bc; /* Color for Bronze */
         }
 
         .membership__levels li:nth-child(3) {
-            background-color: #e8ecef; /* Cor para Silver */
+            background-color: #e8ecef; /* Color for Silver */
         }
 
         .membership__levels li:nth-child(4) {
-            background-color: #f7e7ce; /* Cor para Gold */
+            background-color: #f7e7ce; /* Color for Gold */
         }
 
         .membership__levels li strong {
@@ -238,11 +200,11 @@
     display: none;
     position: fixed;
     z-index: 9999;
-    inset: 0; /* substitui left, top, right, bottom */
+    inset: 0; /* replaces left, top, right, bottom */
     background: rgba(0,0,0,0.4);
     justify-content: center;
     align-items: center;
-    overflow-y: auto; /* permite rolar se o popup for maior que a tela */
+    overflow-y: auto; /* allows scroll if popup is larger than the screen */
 }
 
 .popup-overlay.active {
@@ -258,7 +220,7 @@
     position: relative;
     text-align: left;
     font-family: var(--font-family);
-    margin: 40px 0; /* espaço extra para telas pequenas */
+    margin: 40px 0; /* extra space for small screens */
 }
 
 .popup-content p {
@@ -278,16 +240,29 @@
     color: #6c5b7b;
 }
 
-/* Inputs obrigatórios: barra vermelha à esquerda */
+/* Required inputs: red left bar */
 .membership__form input[required],
 .membership__form textarea[required] {
     border-left: 6px solid #e53935;
 }
 
-/* Inputs não obrigatórios: barra azul à esquerda */
+/* Optional inputs: blue left bar */
 .membership__form input:not([required]),
 .membership__form textarea:not([required]) {
     border-left: 6px solid #1976d2;
+}
+
+.memb__fieldset {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
         @media (max-width: 768px) {

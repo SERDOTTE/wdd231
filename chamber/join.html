@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Canoas Chamber of Commerce business index to connect with local businesses and grow your network in Canoas, RS.">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Canoas Chamber of Commerce</title>
     <link rel="icon" href="/images/favicon.ico">
     <meta name="keywords" content="Canoas, Chamber of Commerce, index page, local businesses, networking">
     <meta name="author" content="Rodrigo Serdotte Freitas">
@@ -23,6 +22,7 @@
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/contacts_cards.js" defer></script>
     <script src="scripts/join.js" defer></script>
+    <meta name="color-scheme" content="light dark">
 
   </head>
   <body>
@@ -64,10 +64,10 @@
         </div>
       </section>
     <main>
-      <h1 class="home__title">Join the Chamber</h1>
-       <div class="container">
+      <h1 class="home__title">Join | Canoas Chamber of Commerce</h1>
+      <div class="container">
         <div class="membership__form">
-            <form action="#" method="post">
+            <form action="thankyou.html" method="post">
                 <label class="form__label" for="name">First Name:</label>
                 <input type="text" id="name" name="name" required>
                 <label class="form__label" for="lastname">Last Name:</label>
@@ -82,55 +82,82 @@
                 <input type="text" id="organization" name="organization" required>
                 <label class="form__label" for="business">Business description:</label>
                 <textarea id="business" name="business" rows="4" required></textarea>
-                <fieldset class="memb__fieldset">
+            </form>
+                <fieldset>
                   <label id="membership__level__title">Membership Level:</label>
-                  <label for="non_profit"><input type="radio" id="non_profit" name="membership" value="non_profit" required> Non Profit Membership</label>
-                  <label for="bronze"><input type="radio" id="bronze" name="membership" value="bronze"> Bronze Membership</label>
-                  <label for="silver"><input type="radio" id="silver" name="membership" value="silver"> Silver Membership</label>
-                  <label for="gold"><input type="radio" id="gold" name="membership" value="gold"> Gold Membership</label>
-
-                  <!-- <label>Membership Level:</label>
-                  <div class="radio-group">
-                    <input type="radio" id="non_profit" name="membership" value="non_profit" required>
-                    <label for="non_profit">Non Profit Membership</label>
+                  <div  class="memb__fieldset">
+                    <div class="radio-group">
+                      <input type="radio" id="non_profit" name="membership" value="non_profit" required>
+                      <label for="non_profit">Non Profit Membership</label>
+                    </div>
+                    <div class="radio-group">
+                      <input type="radio" id="bronze" name="membership" value="bronze">
+                      <label for="bronze">Bronze Membership</label>
+                    </div>
+                    <div class="radio-group">
+                      <input type="radio" id="silver" name="membership" value="silver">
+                      <label for="silver">Silver Membership</label>
+                    </div>
+                    <div class="radio-group">
+                      <input type="radio" id="gold" name="membership" value="gold">
+                      <label for="gold">Gold Membership</label>
+                    </div>
                   </div>
-                  <div class="radio-group">
-                    <input type="radio" id="bronze" name="membership" value="bronze">
-                    <label for="bronze">Bronze</label>
-                  </div>
-                  <div class="radio-group">
-                    <input type="radio" id="silver" name="membership" value="silver">
-                    <label for="silver">Silver Membership</label>
-                  </div>
-                  <div class="radio-group">
-                    <input type="radio" id="gold" name="membership" value="gold">
-                    <label for="gold">Gold Membership</label>
-                  </div> -->
                 </fieldset>
                 <button type="submit">Join Now</button>
-            </form>
+            
         </div>
         <div class="membership__levels">
             <h2>Membership Levels</h2>
             <ul>
                 <li>
                     <strong>Non Profit Membership</strong>
-                    <p>Ideal for new businesses looking to establish themselves in the community.</p>
+                    <div class="levels__details">
+                       <p>Ideal for new businesses looking to establish themselves in the community.</p>
+                      <p>- Access to basic networking events and community resources.</p>
+                      <p>- Listing in the Chamber’s online membership directory.</p>
+                      <p>- Opportunity to participate in advocacy initiatives and community outreach programs.</p>
+                      <p>- Access to select educational workshops and webinars at no additional cost.</p>
+                      <p>- Complimentary ribbon-cutting ceremony for new nonprofit initiatives.</p>
+                      <p>Monthly Fee: Free</p>
+                    </div>
                     <button>Learn More</button>
                 </li>
                 <li>
                     <strong>Bronze Membership</strong>
-                    <p>A great entry-level option for small businesses.</p>
+                    <div class="levels__details">
+                       <p>A great entry-level option for small businesses.</p>
+                       <p>- All benefits of Non-Profit Membership.</p>
+                       <p>- Listing in the Chamber’s online membership directory.</p>
+                       <p>- Opportunity to post one event or promotion per quarter on the Chamber’s website and social media.</p>
+                       <p>- Access to select educational workshops at no additional cost.</p>
+                       <p>Monthly Fee: $10</p>
+                    </div>
                     <button>Learn More</button>
                 </li>
                 <li>
                     <strong>Silver Membership</strong>
-                    <p>Offers additional benefits and networking opportunities.</p>
+                    <div class="levels__details">
+                       <p>Offers additional benefits and networking opportunities.</p>
+                       <p>- All benefits of Bronze Membership.</p>
+                       <p>- Access to advanced networking events.</p>
+                       <p>- Priority participation in advocacy initiatives.</p>
+                       <p>- Access to exclusive educational workshops at no additional cost.</p>
+                       <p>Monthly Fee: $15</p>
+                    </div>
                     <button>Learn More</button>
                 </li>
                 <li>
                     <strong>Gold Membership</strong>
-                    <p>Premium membership with exclusive perks and visibility.</p>
+                    <div class="levels__details">
+                       <p>Premium membership with exclusive perks and visibility.</p>
+                       <p>- All benefits of Silver Membership.</p>
+                       <p>- Access to all networking events.</p>
+                       <p>- Dedicated account manager for personalized support.</p>
+                       <p>- VIP participation in advocacy initiatives.</p>
+                       <p>- Access to all educational workshops at no additional cost.</p>
+                       <p>Monthly Fee: $25</p>
+                    </div>
                     <button>Learn More</button>
                 </li>
             </ul>
