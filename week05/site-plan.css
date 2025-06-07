@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #f5f7f8;
+    --secondary-color: #5EA3EC; 
+    --accent1-color: #0F1A9B;
+    --accent2-color: #150644;
+    --paragraph-font: 'Montserrat', sans-serif; 
+    --title-font: 'Montserrat', sans-serif, 700;
+}
+
+body {
+    font-family: var(--paragraph-font); 
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+#site-plan, #author{
+    color: var(--primary-color);
+}
+
+h1 {
+color: var(--accent2-color);
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--accent2-color);
+    font-family: var(--title-font);
+}
+
+p {
+    padding: 25px;
+}
+
+.normal_paragraph {
+    color: var(--accent2-color);
+}
+
+.colored__text {
+color: var(--accent1-color);
+}
+
+header {
+    padding: 20px;
+    background-color: var(--accent2-color);
+}
+
+.img__logo {
+    margin-top: 1.5rem;
+    border-radius: 3px;
+    height: 200px;
+    border: var(--accent1-color);
+    box-shadow: var(--accent2-color) 0px 0px 10px;
+}
+
+.colours__palette {
+    display: grid;
+    padding: 20px;
+}
+ 
+.img__palette {
+    margin-top: 1.5rem;
+    border-radius: 3px;
+    height: 200px;
+    border: var(--accent1-color);
+    box-shadow: var(--accent2-color) 0px 0px 10px;
+}
+
+nav {
+    background-color: var(--accent2-color);
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: var(--primary-color);
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--accent2-color);
+    padding: 5px;
+    text-align: center;
+    color: var(--primary-color);
+}
