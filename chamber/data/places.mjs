@@ -47,5 +47,12 @@ export const places = [
       "cost": "Usually free or nominal fee (confirm: (51) 3477-4000)",
       "description": "Features exhibits of fossils (like Prestosuchus), butterflies, minerals, and skeletons. Ideal for families and students, with a focus on paleontology. Open Monday to Friday, 9 AM to 5 PM.",
       "photo_link": "007_ulbra_natural.webp"
+    },
+    {
+      "name": "São Luiz Gonzaga Cathedral",
+      "address": "Rua Cônego José Leão Hartmann, 82, Canoas, RS",
+      "cost": "Usually free or nominal fee (confirm: (51) 3477-4000)",
+      "description": "The Matriz São Luís Gonzaga Church, in Canoas, is a neo-Gothic style church, with construction starting in 1926 and its inauguration in 1942. It is the main Catholic church of the city, known for its architectural elements such as arches and stained glass windows",
+      "photo_link": "008_sao_luis_church.webp"
     }
   ];

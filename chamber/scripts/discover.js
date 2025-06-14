@@ -49,40 +49,30 @@ if (showHere) {
 }
 
 function showLastVisitMessage() {
-    const messageDiv = document.createElement('div');
-    messageDiv.id = 'last-visit-message';
-    messageDiv.style.margin = '16px 0';
-    messageDiv.style.padding = '12px';
-    messageDiv.style.background = '#e6e2f0';
-    messageDiv.style.borderRadius = '8px';
-    messageDiv.style.textAlign = 'center';
+    const messageDiv = document.getElementById('last-visit-message');
+    if (!messageDiv) return;
 
     const lastVisit = localStorage.getItem('lastVisit');
-    const now = new Date();
+    const now = Date.now();
     let message = '';
 
     if (lastVisit) {
-        const lastDate = new Date(lastVisit);
-        const diffTime = Math.abs(now - lastDate);
+        const lastTime = Number(lastVisit);
+        const diffTime = now - lastTime;
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        if (diffDays === 0) {
-            message = 'Welcome back! You last visited today.';
+        if (diffTime < 1000 * 60 * 60 * 24) {
+            message = 'Back so soon! Awesome!';
         } else if (diffDays === 1) {
-            message = 'Welcome back! It\'s been 1 day since your last visit.';
+            message = 'You last visited 1 day ago.';
         } else {
-            message = `Welcome back! It's been ${diffDays} days since your last visit.`;
+            message = `You last visited ${diffDays} days ago.`;
         }
     } else {
-        message = 'Welcome! This is your first visit.';
+        message = 'Welcome! Let us know if you have any questions.';
     }
 
     messageDiv.textContent = message;
-    // Exibe a mensagem no topo do main
-    const main = document.querySelector('main');
-    if (main) main.prepend(messageDiv);
-
-    // Atualiza o localStorage com a data atual
-    localStorage.setItem('lastVisit', now.toISOString());
+    localStorage.setItem('lastVisit', now);
 }
 
 document.addEventListener('DOMContentLoaded', showLastVisitMessage);

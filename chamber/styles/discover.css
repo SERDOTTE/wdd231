@@ -228,3 +228,43 @@
         z-index: 1;
     }
 }
+
+/* Sidebar visitor message */
+.sidebar-visitor-message {
+    background: #e6e2f0;
+    color: #2d1e3d;
+    border-radius: 10px;
+    padding: 18px 14px;
+    margin-bottom: 24px;
+    font-size: 1.08rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(73,35,107,0.07);
+    text-align: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+@media (min-width: 1025px) {
+    .main-content-wrapper {
+        flex-direction: row;
+        gap: 32px;
+        align-items: flex-start;
+        width: 100%;
+    }
+    aside {
+        min-width: 220px;
+        max-width: 320px;
+        margin: 0;
+        align-self: flex-start;
+    }
+    .main-content {
+        flex: 1;
+    }
+}
