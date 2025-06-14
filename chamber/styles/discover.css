@@ -142,7 +142,17 @@
         display: block;
         width: calc(100% - 32px);
     }
+
+    .place-card-content img {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .place-card-content img:hover {
+        transform: scale(1.16);
+        box-shadow: 0 8px 24px rgba(73,35,107,0.18);
+        z-index: 1;
+    }
 }
+
 
 /* ----------- Large screens (1025px and up) ----------- */
 @media (min-width: 1025px) {
@@ -207,5 +217,14 @@
         display: block;
         align-self: center;
         width: calc(100% - 32px);
+    }
+    /* Efeito de hover nas imagens dos cards apenas em telas grandes */
+    .place-card-content img {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .place-card-content img:hover {
+        transform: scale(1.16);
+        box-shadow: 0 8px 24px rgba(73,35,107,0.18);
+        z-index: 1;
     }
 }
