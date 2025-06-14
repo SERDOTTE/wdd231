@@ -14,6 +14,13 @@
     font-family: 'Poppins', Arial, sans-serif;
 }
 
+#discover {
+    padding: 20px;
+    background: #f9f9f9;
+    border-bottom: 2px solid #cebbe0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #032f53;
+}
 /* Title section */
 .place-card-title h2 {
     font-size: 1.8rem;
