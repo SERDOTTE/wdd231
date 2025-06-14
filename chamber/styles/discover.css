@@ -1,0 +1,192 @@
+/* General card styles */
+.place-card {
+    background: #cebbe0;
+    border-radius: 12px;
+    margin: 18px 0;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+/* Title section */
+.place-card-title h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+/* Card content layout for small screens */
+.place-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Image */
+.place-card-content img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Description and address */
+.place-card-description p {
+    margin: 0 0 10px 0;
+    color: #000000;
+    font-style: italic;
+    /* font-size: 1rem; */
+}
+.place-card-description address {
+    font-style: normal;
+    color: #050505;
+    font-size: 0.98rem;
+    margin-top: 15px;
+}
+
+/* Button */
+.place-card .learn-more-btn {
+    width: 100%;
+    margin: 18px 0 0 0;
+    display: block;
+    padding: 12px 0;
+    border: none;
+    border-radius: 18px;
+    background: #49236b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-sizing: border-box;
+}
+.place-card .learn-more-btn:hover {
+    background: #140125;  
+}
+
+/* Container for all cards */
+#allplaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+ 
+   
+}
+
+/* ----------- Medium screens (641px to 1024px) ----------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+    #allplaces {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .place-card {
+        max-width: 700px;
+        width: 100%;
+        margin: 0;
+        padding: 20px 24px;
+        box-sizing: border-box;
+    }
+    .place-card-title h2 {
+        font-size: 1.3rem;
+        margin: 0 0 12px 0;
+        text-align: left;
+    }
+    .place-card-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .place-card-content img {
+        width: 220px;
+        height: 150px;
+        margin-bottom: 0;
+        margin-right: 24px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+    .place-card-description {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .place-card-description p,
+    .place-card-description address {
+        margin-bottom: 10px;
+    }
+    .place-card .learn-more-btn {
+        margin: 18px auto 0 auto;
+        display: block;
+    }
+}
+
+/* ----------- Large screens (1025px and up) ----------- */
+@media (min-width: 1025px) {
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        justify-items: stretch;
+        align-items: flex-start;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .place-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-sizing: border-box;
+        background: #cebbe0;
+    }
+    .place-card-title h2 {
+        text-align: left;
+        margin-bottom: 12px;
+    }
+    .place-card-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Centraliza verticalmente o conteúdo ao lado da imagem */
+        width: 100%;
+    }
+    .place-card-content img {
+        width: 180px;
+        height: 130px;
+        border-radius: 8px;
+        margin-right: 18px;
+        object-fit: cover;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        display: block;
+        max-width: 100%;
+    }
+    .place-card-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   /* Centraliza verticalmente dentro do container */
+        align-items: flex-start;
+        flex: 1;
+        height: 100%;
+    }
+    .place-card-description p,
+    .place-card-description address {
+        margin-bottom: 8px;
+    }
+    .place-card .learn-more-btn {
+        margin: 14px auto 0 auto;
+        display: block;
+        align-self: center;
+    }
+}

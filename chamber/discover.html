@@ -15,62 +15,62 @@
       content="Rodrigo Serdotte Freitas - WDD 231 - DWeb Frontend Development I - Chamber Directory Page"
     />
     <meta
-      property="og:image"
-      content="https://https://serdotte.github.io/wdd231/images/profile.jpg"
+      property="og:image" content="https://serdotte.github.io/wdd231/images/profile.jpg"
     />
     <meta
-      property="og:url"
-      content="https://serdotte.github.io/wdd131/chamber/directory.html"
+      property="og:url" content="https://serdotte.github.io/wdd131/chamber/directory.html"
     />
     <link rel="stylesheet" href="styles/base.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="styles/discover.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/discover.js" type="module" defer></script>
   </head>
   <body>
-        <header>
-            <div class="header__container__chamber">
-                <div class="header__chamber">
-                    <img
-                        class="logo"
-                        src="images/logo_chamber_canoas.png"
-                        alt="Canoas Chamber logo"
-                        width="80"
-                    />
-                    <div class="header__chamber-text">
-                        <h1>Canoas</h1>
-                        <p>Chamber of Commerce</p>
-                    </div>
-                </div>    
-                <div class="header__chamber-actions">
-                    <button class="theme-toggle-btn" aria-label="Toggle theme">
-                        🌙/☀️
-                        </button>
-                        <button class="hamburger-menu" aria-label="Toggle navigation">
-                        &#9776;
-                    </button>
-                </div>
-                <nav class="nav__menu">
-                    <a href="home.html">Home</a>
-                    <a href="directory.html">Directory</a>
-                    <a href="join.html">Join</a>
-                    <a href="discover.html">Discover</a>
-                </nav>
+    <header>
+        <div class="header__container__chamber">
+          <div class="header__chamber">
+            <img
+                class="logo"
+                src="images/logo_chamber_canoas.png"
+                alt="Canoas Chamber logo"
+                width="80">
+            <div class="header__chamber-text">
+              <h1>Canoas</h1>
+              <p>Chamber of Commerce</p>
             </div>
-        </header>
-        <section class="hero">
-            <img src="images/hero_image.jpg" alt="Main highlight image" />
-            <div class="hero-text">
-                <p>Grow your business with us!</p>
-                <a href="#join" class="cta-button">Join Now</a>
-            </div>
-        </section>
-        <main>
-            DISCOVERY - in construction
-        </main>
-    <footer>
+          </div>   
+          <div class="header__chamber-actions">
+            <nav class="nav__menu">
+              <a href="index.html">Home</a>
+              <a href="directory.html">Directory</a>
+              <a href="join.html">Join</a>
+              <a href="discover.html">Discover</a>
+            </nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+              &#9776;
+            </button>
+             <button class="theme-toggle-btn" aria-label="Toggle theme">
+                🌙/☀️
+              </button>
+          </div>
+        </div>
+    </header>
+    <section class="hero">
+      <h2 class="visually-hidden">Main Highlight</h2>
+      <img src="images/hero_image.jpg" alt="Main highlight image">
+      <div class="hero-text">
+        <p>Grow your business with us!</p>
+        <a href="#join" class="cta-button">Join Now</a>
+      </div>
+    </section>
+    <main>
+      <h1 class="home__title">Discover</h1>
+      <div id="allplaces"></div>
+       
+      
+    </main>
+   <footer>
       <div class="chamber__contact">
         <h3>Canoas Chamber of Commerce</h3>
         <p>1234 Main St, Canoas, RS</p>
@@ -78,31 +78,18 @@
         <p>info@canoaschamber.com</p>
         <p>(51) 1234-5678</p>
       </div>
-      <div class="social__contact">
-        <p>Follow us on social media:</p>
-        <ul class="social-icons">
-          <li>
-            <a href="#" aria-label="YouTube"
-              ><i class="fab fa-youtube"></i></a
-            >
-          </li>
-          <li>
-            <a href="#" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i></a
-            >
-          </li>
-          <li>
-            <a href="#" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i></a
-            >
-          </li>
-        </ul>
+      <div class="social__contact">        
+        <div class="social-icons">
+          <a href="#"><img class="icon" src="images/facebook_icon.png" alt="Facebook"></a>
+          <a href="#"><img class="icon" src="images/twitter_icon.png" alt="Twitter"></a>
+          <a href="#"><img class="icon" src="images/insta_icon.png" alt="Instagram"></a>
+        </div>
       </div>
       <div class="author__info">
         <p>WDD231 Class Project</p>
         <p>Rodrigo Serdotte Freitas</p>
         <p>&copy;<span id="copyrightYear"></span>Canoas Chamber of Commerce</p>
-        <p>Last Modification: <span id="last_update"></span></p>
+        <p id="lastmod">Last Modification: <span id="lastModified"></span></p>
       </div>
     </footer>
   </body>
