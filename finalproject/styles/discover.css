@@ -1,0 +1,270 @@
+/* General card styles */
+.place-card {
+    background: #cebbe0;
+    color: #000;
+    border-radius: 12px;
+    margin: 18px 0;
+    padding: 18px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+#discover {
+    padding: 20px;
+    background: #f9f9f9;
+    border-bottom: 2px solid #cebbe0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #032f53;
+}
+/* Title section */
+.place-card-title h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+/* Card content layout for small screens */
+.place-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Image */
+.place-card-content img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Description and address */
+.place-card-description p {
+    margin: 0 0 10px 0;
+    color: #000;
+    font-style: italic;
+    background: #cebbe0; /* garante contraste */
+}
+.place-card-description address {
+    font-style: normal;
+    color: #050505;
+    font-size: 0.98rem;
+    margin-top: 15px;
+    background: #cebbe0; /* garante contraste */
+}
+
+/* Button */
+.place-card .learn-more-btn {
+    width: calc(100% - 32px);
+    margin: 18px 16px 0 16px;
+    display: block;
+    padding: 12px 0;
+    border: none;
+    border-radius: 18px;
+    background: #49236b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-sizing: border-box;
+}
+.place-card .learn-more-btn:hover {
+    background: #140125;
+}
+
+/* Container for all cards */
+#allplaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* ----------- Medium screens (641px to 1024px) ----------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+    #allplaces {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .place-card {
+        max-width: 700px;
+        width: 100%;
+        margin: 0;
+        padding: 20px 24px;
+        box-sizing: border-box;
+        background: #cebbe0;
+        color: #000;
+    }
+    .place-card-title h2 {
+        font-size: 1.3rem;
+        margin: 0 0 12px 0;
+        text-align: left;
+    }
+    .place-card-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .place-card-content img {
+        width: 220px;
+        height: 150px;
+        margin-bottom: 0;
+        margin-right: 24px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 8px;
+        max-width: 100%;
+    }
+    .place-card-description {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .place-card-description p,
+    .place-card-description address {
+        margin-bottom: 10px;
+        background: #cebbe0;
+        color: #000;
+    }
+    .place-card .learn-more-btn {
+        margin: 18px auto 0 auto;
+        display: block;
+        width: calc(100% - 32px);
+    }
+
+    .place-card-content img {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .place-card-content img:hover {
+        transform: scale(1.16);
+        box-shadow: 0 8px 24px rgba(73,35,107,0.18);
+        z-index: 1;
+    }
+}
+
+
+/* ----------- Large screens (1025px and up) ----------- */
+@media (min-width: 1025px) {
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        justify-items: stretch;
+        align-items: flex-start;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .place-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-sizing: border-box;
+        background: #cebbe0;
+        color: #000;
+    }
+    .place-card-title h2 {
+        text-align: left;
+        margin-bottom: 12px;
+    }
+    .place-card-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Centraliza verticalmente o conteúdo ao lado da imagem */
+        width: 100%;
+    }
+    .place-card-content img {
+        width: 180px;
+        height: 130px;
+        border-radius: 8px;
+        margin-right: 18px;
+        object-fit: cover;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        display: block;
+        max-width: 100%;
+    }
+    .place-card-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   /* Centraliza verticalmente dentro do container */
+        align-items: flex-start;
+        flex: 1;
+        height: 100%;
+    }
+    .place-card-description p,
+    .place-card-description address {
+        margin-bottom: 8px;
+        background: #cebbe0;
+        color: #000;
+    }
+    .place-card .learn-more-btn {
+        margin: 14px auto 0 auto;
+        display: block;
+        align-self: center;
+        width: calc(100% - 32px);
+    }
+    /* Efeito de hover nas imagens dos cards apenas em telas grandes */
+    .place-card-content img {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .place-card-content img:hover {
+        transform: scale(1.16);
+        box-shadow: 0 8px 24px rgba(73,35,107,0.18);
+        z-index: 1;
+    }
+}
+
+/* Sidebar visitor message */
+.sidebar-visitor-message {
+    background: #e6e2f0;
+    color: #2d1e3d;
+    border-radius: 10px;
+    padding: 18px 14px;
+    margin-bottom: 24px;
+    font-size: 1.08rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(73,35,107,0.07);
+    text-align: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+@media (min-width: 1025px) {
+    .main-content-wrapper {
+        flex-direction: row;
+        gap: 32px;
+        align-items: flex-start;
+        width: 100%;
+    }
+    aside {
+        min-width: 220px;
+        max-width: 320px;
+        margin: 0;
+        align-self: flex-start;
+    }
+    .main-content {
+        flex: 1;
+    }
+}

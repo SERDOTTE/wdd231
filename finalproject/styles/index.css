@@ -1,0 +1,108 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    align-items: start;
+}
+
+.card {
+    background: #b8afcc;
+    color: #333; /* Default text color for contrast */
+    box-shadow: 0 2px 8px rgba(3,47,83,0.10);
+    margin-bottom: 20px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.card h2 {
+    width: 100%;
+    margin: 0;
+    padding: 5px 8px;
+    background: var(--primary-color);
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Medium screens: adjusts the grid to one column */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.weather-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.weather-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    align-self: flex-start;
+    border-radius: 8px;
+    
+}
+
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-family: var(--font-family); /* guarantees the same source */
+    font-size: 1rem;
+
+}
+
+.card .weather-info {
+    margin-top: 32px;
+}
+
+#temperature {
+    font-weight: bold;
+}
+
+/* Adjust the forecast section to match the font and size of weather-data*/
+.card .forecast-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Space between days */
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin-top: 18px; /* Space from h2 */
+    width: 100%;
+}
+
+.card .forecast-data p {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 0 18px; /* top, right, bottom, left */
+}
+
+.home__title {
+    margin-left: 10px;   /* equal to the margin of the .container */
+    margin-right: 10px;
+    text-align: left;
+}

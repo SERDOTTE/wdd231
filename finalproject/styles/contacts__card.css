@@ -1,0 +1,135 @@
+#contacts__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+/* Settings for the main container */
+.menu__directory {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Adjustments for the card container */
+#cards {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#contacts__card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+.contact-card {
+    background: #b8afcc;;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 18px 24px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.contact-card h2 {
+    margin: 0 0 4px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Center the name and tag line */
+.contact-card h2,
+.contact-card .tagline {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-family);
+}
+
+.contact-card .tagline {
+    margin: 0 0 12px 0;
+    position: relative;
+    color: #000000;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Horizontal line below the tag line */
+.contact-card .tagline::after {
+    content: "";
+    display: block;
+    margin: 12px auto 0 auto;
+    width: 100%;
+    height: 1.5px;
+    background: #6c5b7b;
+    border-radius: 1px;
+}
+
+.contact-columns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 3px;
+}
+
+.contact-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.contact-left img {
+    width: 90px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact-right {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3px;
+    font-family: var(--font-family); /* same font as h2 */
+    font-size: 0.7rem; /* smaller than h2 */
+}
+
+.contact-right p,
+.contact-right a {
+    margin: 0;
+    text-align: left;
+    color: #222;
+    font-size: 0.7rem;
+    word-break: break-all;
+    font-family: var(--font-family); /* guarantee the same font */
+}
+
+.contact-right .label {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.contact-right a {
+    color: #0a4b78;
+    text-decoration: underline;
+    font-weight: 500;
+    display: inline-block;
+}
