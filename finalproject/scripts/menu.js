@@ -4,47 +4,43 @@ document.getElementById("copyrightYear").textContent = currentYear;
 const lastModified = document.lastModified;
 document.getElementById("lastModified").textContent = lastModified;
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.nav__menu');
+    const closeBtn = document.querySelector('.close-menu');
+    const navMenu = document.querySelector('.navigation');
 
-    // Creates the X button dynamically
-    const closeBtn = document.createElement('button');
-    closeBtn.innerHTML = '&times;';
-    closeBtn.setAttribute('aria-label', 'Close menu');
-    closeBtn.classList.add('close-menu');
-    closeBtn.style.fontSize = '2rem';
-    closeBtn.style.background = 'none';
-    closeBtn.style.border = 'none';
-    closeBtn.style.color = '#fff';
-    closeBtn.style.cursor = 'pointer';
-    closeBtn.style.alignSelf = 'flex-end';
-    closeBtn.style.marginBottom = '10px';
-
-    // Show the menu when clicking the hamburger
+    // Show dropdown menu when hamburger is clicked
     hamburger.addEventListener('click', () => {
         navMenu.classList.add('active');
-        if (!navMenu.contains(closeBtn)) {
-            navMenu.prepend(closeBtn);
-        }
+        hamburger.style.display = 'none';
+        closeBtn.style.display = 'block';
     });
 
-    // Hide the menu when clicking the X
+    // Hide menu when close button is clicked
     closeBtn.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        if (navMenu.contains(closeBtn)) {
-            navMenu.removeChild(closeBtn);
+        hamburger.style.display = 'block';
+        closeBtn.style.display = 'none';
+    });
+
+    // Hide menu and close button on large screens
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) {
+            navMenu.classList.remove('active');
+            hamburger.style.display = 'none';
+            closeBtn.style.display = 'none';
+        } else {
+            hamburger.style.display = navMenu.classList.contains('active') ? 'none' : 'block';
+            closeBtn.style.display = navMenu.classList.contains('active') ? 'block' : 'none';
         }
     });
 
-    // Ensure the menu and X disappear when resizing to larger screens
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 700) {
-            navMenu.classList.remove('active');
-            if (navMenu.contains(closeBtn)) {
-                navMenu.removeChild(closeBtn);
-            }
-        }
-    });
+    // Initialize display based on screen size
+    if (window.innerWidth > 900) {
+        hamburger.style.display = 'none';
+        closeBtn.style.display = 'none';
+    } else {
+        hamburger.style.display = navMenu.classList.contains('active') ? 'none' : 'block';
+        closeBtn.style.display = navMenu.classList.contains('active') ? 'block' : 'none';
+    }
 });
