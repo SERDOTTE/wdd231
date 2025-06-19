@@ -12,7 +12,7 @@ app.post('/submit', (req, res) => {
     const data = req.body;
     const filePath = 'submissions.json';
 
-    // Lê o arquivo existente ou cria um novo array
+    // Reads existing file or creates new array
     let submissions = [];
     if (fs.existsSync(filePath)) {
         const fileData = fs.readFileSync(filePath, 'utf8');

@@ -1,6 +1,7 @@
 :root {
     --primary-color: #f5f7f8;
-    --secondary-color: #5EA3EC;
+    --secondary-color: #cebbe0;
+;
     --accent1-color: #0F1A9B;
     --accent2-color: #150644;
     --paragraph-font: 'Montserrat', sans-serif;
@@ -10,15 +11,15 @@
 .home__container {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* aumenta o espaço entre os três elementos */
+    gap: 40px; /* Increase the space between the three elements */
     max-width: 1400px;
-    margin: 40px auto 20px auto; /* centraliza horizontalmente e dá espaço acima */
+    margin: 40px auto 20px auto; /* Centers horizontally and adds space above */
     padding: 20px;
     align-items: center;
     box-sizing: border-box;
 }
 
-/* Opcional: Espaço interno e visual para cada bloco de conteúdo */
+/* Optional: Internal and visual space for each content block */
 .home__container_content {
     width: 100%;
     background: var(--secondary-color);
@@ -39,7 +40,7 @@
     box-shadow: 0 4px 16px rgba(3,47,83,0.18);
 }
 
-/* Adicionar em index.css */
+/* Add to index.css */
 .home__container_content_text {
     flex: 1;
     text-align: justify;
@@ -83,47 +84,6 @@ h1 {
     }
 }
 
-.weather-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.weather-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 18px;
-}
-
-.weather-info img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    align-self: flex-start;
-    border-radius: 8px;
-    
-}
-
-.weather-data {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    font-family: var(--font-family); /* guarantees the same source */
-    font-size: 1rem;
-
-}
-
-.card .weather-info {
-    margin-top: 32px;
-}
-
-#temperature {
-    font-weight: bold;
-}
-
 /* Adjust the forecast section to match the font and size of weather-data*/
 .card .forecast-data {
     display: flex;
@@ -149,7 +109,7 @@ h1 {
     text-align: left;
 }
 
-/* Responsivo: empilha imagem e texto em telas pequenas */
+/* Responsive: stacks image and text on small screens */
 @media (max-width: 800px) {
     .home__container_content {
         flex-direction: column;

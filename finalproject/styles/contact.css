@@ -1,4 +1,3 @@
-/* Exemplo de layout responsivo para duas colunas */
 .contact-container {
     display: flex;
     flex-direction: row;
@@ -8,20 +7,50 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 32px 16px;
-    background: var(--secondary-color);
+    background: #cebbe0;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(73,35,107,0.07);
 }
 
 .contact-form, .contact-schedule {
     flex: 1 1 0;
-    /* background: #fff; */
     border-radius: 12px;
     padding: 24px;
     
 }
 
-/* Responsivo: empilha em telas pequenas */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;   
+    margin-left: 20px; /* equal to the margin of the .container */
+    color: var(--accent2-color); /* Default text color for contrast */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.p_form {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2rem;
+    font-family: 'montserrat', sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+    font-family: 'montserrat', sans-serif;
+}
+
+
+/* Responsive: stacks on small screens */
 @media (max-width: 800px) {
     .contact-container {
         flex-direction: column;
@@ -60,9 +89,8 @@
     cursor: pointer;
 }
 
-/* Opcional: destaca o label */
+/* Optional: highlights the label */
 .contact-schedule label[for="date"] {
-    font-weight: bold;
     margin-top: 12px;
     display: block;
 }
@@ -121,7 +149,7 @@
     color: #222;
 }
 
-/* Ajuste para os checkboxes do fieldset */
+/* Adjusts for checkboxes in the fieldset */
 .contact-form fieldset label {
     display: flex;
     align-items: center;
@@ -139,12 +167,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 18px;
 }
 
-.contact-submit-center button[type="submit"],
-.contact-submit-center button.confirm {
-    padding: 10px 32px;
+.contact-submit-center button,
+.contact-submit-center .confirm,
+#close-modal-btn {
+    min-width: 120px;
+    max-width: 180px;
+    padding: 8px 0;
     border-radius: 6px;
     border: none;
     background: var(--accent1-color, #032f53);
@@ -152,17 +183,19 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s;
-    margin-bottom: 15px;
+    margin: 0 6px;
+    display: block;
+    text-align: center;
 }
 
-
-.contact-submit-center button[type="submit"]:hover,
-.contact-submit-center button.confirm:hover {
+.contact-submit-center button:hover,
+.contact-submit-center .confirm:hover,
+#close-modal-btn:hover {
     background: var(--accent2-color, #cebbe0);
-    color: #f8f8f8;
+    color: #222;
 }
 
-/* Responsivo: empilha data e hora em telas pequenas */
+/* Responsive: stacks date and time on small screens */
 @media (max-width: 600px) {
     .contact-schedule-row {
         flex-direction: column;
@@ -179,5 +212,68 @@
 .address-fields label,
 .address-fields input {
     width: 100%;
+    box-sizing: border-box;
+}
+
+.success-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items:    center;
+}
+
+.success-modal-content {
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    padding: 32px 24px 24px 24px;
+    min-width: 280px;
+    max-width: 90vw;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    text-align: left;
+    font-family: 'Poppins', Arial, sans-serif;
+    animation: modalIn 0.2s;
+}
+
+#close-modal-btn {
+    margin: 18px auto 0 auto;
+    display: block;
+    padding: 10px 32px;
+    border-radius: 6px;
+    border: none;
+    background: var(--accent1-color, #032f53);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#close-modal-btn:hover {
+    background: var(--accent2-color, #cebbe0);
+    color: #fafafa;
+}
+
+@keyframes modalIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    width: 160px;
+    max-width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
     box-sizing: border-box;
 }
