@@ -1,4 +1,4 @@
-import { services } from "../data/services-list.mjs";
+
 
 const showHere = document.getElementById('services-list');
 
@@ -31,27 +31,41 @@ function showModal(name, desc) {
   document.getElementById('service-modal').style.display = 'flex';
 }
 
+async function loadServices() {
+    try {
+        const response = await fetch('data/services.json');
+        if (!response.ok) throw new Error('Erro ao carregar os serviços!');
+        const services = await response.json(); // Manipulação adequada da resposta JSON
+
+        displayServices(services);
+    } catch (error) {
+        showHere.innerHTML = `<p style="color:red;">Erro ao carregar serviços: ${error.message}</p>`;
+        console.error(error);
+    }
+}
+
 function displayServices(services) {
-  services.filter(service => service && service.name).forEach(service => {
-    const card = document.createElement('div');
-    card.className = 'service-card';
+    showHere.innerHTML = '';
+    services.forEach(service => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
 
-    const img = document.createElement('img');
-    img.src = `images/${service.photo_link}`;
-    img.alt = service.name;
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => showModal(service.name, service.description));
+        const img = document.createElement('img');
+        img.src = `images/${service.photo_link}`;
+        img.alt = service.name;
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => showModal(service.name, service.description));
 
-    const h2 = document.createElement('h2');
-    h2.textContent = service.name;
+        const h2 = document.createElement('h2');
+        h2.textContent = service.name;
 
-    card.appendChild(img);
-    card.appendChild(h2);
+        card.appendChild(img);
+        card.appendChild(h2);
 
-    showHere.appendChild(card);
-  });
+        showHere.appendChild(card);
+    });
 }
 
 if (showHere) {
-  displayServices(services);
+    loadServices();
 }
